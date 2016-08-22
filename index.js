@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-infinity-loader'
+  name: 'ember-infinite-loader'
 };

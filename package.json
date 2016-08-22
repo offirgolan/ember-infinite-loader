@@ -1,5 +1,5 @@
 {
-  "name": "ember-infinity-loader",
+  "name": "ember-infinite-loader",
   "version": "0.0.0",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
@@ -11,7 +11,7 @@
     "start": "ember server",
     "test": "ember try:each"
   },
-  "repository": "git@github.com:offirgolan/ember-infinity-loader.git",
+  "repository": "git@github.com:offirgolan/ember-infinite-loader.git",
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -49,7 +49,6 @@
     "ember-in-viewport": "^2.0.8"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config",
-    "after": "ember-infinity"
+    "configPath": "tests/dummy/config"
   }
 }

@@ -1,11 +1,11 @@
 import Ember from 'ember';
-import layout from '../templates/components/infinity-loader';
+import layout from '../templates/components/infinite-loader';
 import InViewportMixin from 'ember-in-viewport';
 
 const { computed, observer, run } = Ember;
 
 const ReachedInfinity = Ember.Component.extend(InViewportMixin, {
-  classNames: ['infinity-loader'],
+  classNames: ['infinite-loader'],
   classNameBindings: ['viewportEntered:in-viewport'],
   layout,
 

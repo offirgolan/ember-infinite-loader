@@ -1,4 +1,4 @@
-# ember-infinity-loader
+# ember-infinite-loader
 
 This README outlines the details of collaborating on this Ember addon.
 
