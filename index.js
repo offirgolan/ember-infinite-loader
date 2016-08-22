@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-reached-infinity'
+  name: 'ember-infinity-loader'
 };
