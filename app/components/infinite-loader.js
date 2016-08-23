@@ -1,1 +1,1 @@
-export { default } from 'ember-infinite-loader/components/reached-infinity';
+export { default } from 'ember-infinite-loader/components/infinite-loader';

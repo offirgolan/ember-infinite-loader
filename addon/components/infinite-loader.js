@@ -6,7 +6,7 @@ const { computed, observer, run } = Ember;
 
 const ReachedInfinity = Ember.Component.extend(InViewportMixin, {
   classNames: ['infinite-loader'],
-  classNameBindings: ['viewportEntered:in-viewport'],
+  classNameBindings: ['viewportEntered:in-viewport', 'reachedInfinity'],
   layout,
 
   collection: null,
@@ -15,7 +15,7 @@ const ReachedInfinity = Ember.Component.extend(InViewportMixin, {
   destroyOnReach: false,
   reachedInfinity: false,
 
-  onReach: null,
+  onReachedInfinity: null,
 
   shouldShowLoader: computed('viewportEntered', 'reachedInfinity', function() {
     return this.get('viewportEntered') && !this.get('reachedInfinity');
@@ -47,7 +47,7 @@ const ReachedInfinity = Ember.Component.extend(InViewportMixin, {
     this._cancelTimers();
   },
 
-  onReachedInfinity: observer('reachedInfinity', 'destroyOnReach', function() {
+  onReachedInfinityedInfinity: observer('reachedInfinity', 'destroyOnReach', function() {
     if(this.get('reachedInfinity') && this.get('destroyOnReach')) {
       this.destroy();
     }
@@ -56,7 +56,7 @@ const ReachedInfinity = Ember.Component.extend(InViewportMixin, {
   scheduleReachedInfinity: observer('collection.[]', 'viewportEntered', function() {
     if(this.get('viewportEntered')) {
       /*
-        Continue scheduling onReach until no longer in viewport
+        Continue scheduling onReachedInfinity until no longer in viewport
        */
       this._scheduleReachedInfinity();
     }
@@ -68,11 +68,11 @@ const ReachedInfinity = Ember.Component.extend(InViewportMixin, {
 
   _debounceReachedInfinity() {
     /*
-      This debounce is needed when there is not enough delay between onReach calls.
+      This debounce is needed when there is not enough delay between onReachedInfinity calls.
       Without this debounce, all collection will be rendered causing immense performance problems
      */
     if(!this.get('reachedInfinity')) {
-      this._debounceTimer = run.debounce(this, this.sendAction, 'onReach', this.get('debounce'));
+      this._debounceTimer = run.debounce(this, this.sendAction, 'onReachedInfinity', this.get('debounce'));
     }
   },
 
